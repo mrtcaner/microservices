@@ -6,6 +6,8 @@
 - btw kafka_2.11-1.1.0 may have zookeper too!
 - run config-server application
 - run client-config application(make sure you have vm parameter -Dspring.profiles.active=dev)
+- a configuration repository must be supplied to server properties and also a webhook must be configured to test autorefresh 
+- to make webhook to access your local app, do not forget to make sure your server app can be accessed from internet. Consider port forwarding!
 
 ## Future Work
 * add security and encryption http://www.baeldung.com/spring-cloud-configuration
