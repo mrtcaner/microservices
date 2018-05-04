@@ -7,3 +7,7 @@
 
 ## Future Work
 * Move eureka server urls to spring cloud config
+* A single client app is sufficient. It can be started with different params many times(mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=test")
+	- server.port should be assigned random (server.port=${PORT:${SERVER_PORT:0}})
+	- client app name must be like my-client-app-${server-port}
+	- these properties can be read within rest controller using @Value if neccessary
