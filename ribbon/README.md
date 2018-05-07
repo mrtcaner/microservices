@@ -14,3 +14,4 @@
 * Move eureka server urls to spring cloud config
 * eureka server not replicating
 * cannot obtain application's port.(not necessary)
+* override some ribbon configs through configuration classes
