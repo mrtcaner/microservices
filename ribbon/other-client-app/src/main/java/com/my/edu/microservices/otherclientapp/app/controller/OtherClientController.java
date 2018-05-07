@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 public class OtherClientController {
 
-    private static int id = ThreadLocalRandom.current().nextInt();
+    private static String id = UUID.randomUUID().toString();
 
     @Autowired
     DiscoveryClient discoveryClient;
@@ -29,7 +29,7 @@ public class OtherClientController {
 
     @GetMapping(value = "/name")
     public String getClientName(){
-        return "Hi from Other Client with id:" + id;
+        return "Hi from Other Client with id: " + id;
     }
 
     @GetMapping(value = "/client")
