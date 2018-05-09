@@ -5,7 +5,7 @@
 * Servers run on ports 8011 and 8012, clients run on random ports
 * client app has ribbon dependecy added whereas other-client-app not. So only cliet-app's some methods are load balanced
 
-# built
+# build
 * run eureka servers
 * run client app
 * run multiple other-client-app using mvn spring-boot:run
