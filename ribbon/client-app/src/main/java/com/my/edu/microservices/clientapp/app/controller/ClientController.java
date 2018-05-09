@@ -31,6 +31,10 @@ public class ClientController {
         return "Greetings from Client!";
     }
 
+    /**
+     * No load balancins. Always calls the client what ever discoveryClient.getInstances returns
+     * @return
+     */
     @GetMapping(value = "/otherclient")
     public Map getOtherClientsProperties(){
         Map otherClientProps = new HashMap<>();
@@ -47,6 +51,10 @@ public class ClientController {
         return otherClientProps;
     }
 
+    /**
+     * Load balanced. Calls a different instance each time
+     * @return
+     */
     @GetMapping(value = "/otherclientsname")
     public String getOtherClientsName(){
             return restTemplate.getForObject("http://" + "otherclient" + "/name", String.class);
