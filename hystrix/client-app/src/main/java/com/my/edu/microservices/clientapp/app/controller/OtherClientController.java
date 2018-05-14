@@ -21,6 +21,21 @@ public interface OtherClientController {
     @GetMapping(value = "/failforfivetimes")
     public String callFailForFiveTimesMethod();
 
+    @GetMapping(value = "/executestrategy1")
+    public String executestrategy1();
+
+    @GetMapping(value = "/executestrategy2")
+    public String executestrategy2();
+
+    @GetMapping(value = "/executestrategy3")
+    public String executestrategy3();
+
+    @GetMapping(value = "/executestrategy4")
+    public String executestrategy4();
+
+    @GetMapping(value = "/executestrategy5")
+    public String executestrategy5();
+
 
 
 }
